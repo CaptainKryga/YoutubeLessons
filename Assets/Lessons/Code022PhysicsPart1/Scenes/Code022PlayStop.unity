@@ -1060,8 +1060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052b45832b67df346bb53cdc5afe51f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBall: {fileID: 9123433303119893196, guid: abc7fbaed767bd048a9f64de96d9ea4a, type: 3}
-  _content: {fileID: 1009273200}
+  PrefabBall: {fileID: 9123433303119893196, guid: abc7fbaed767bd048a9f64de96d9ea4a, type: 3}
+  Content: {fileID: 1009273200}
   _delayDefault: 0.1
   _force: 1500
 --- !u!1 &1723162806
