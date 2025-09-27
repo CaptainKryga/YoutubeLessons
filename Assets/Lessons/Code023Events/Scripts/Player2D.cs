@@ -45,14 +45,5 @@ namespace Lessons.Code023Events.Scripts
 		{
 			isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		}
-
-		private void OnDrawGizmosSelected()
-		{
-			if (groundCheck != null)
-			{
-				Gizmos.color = Color.red;
-				Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-			}
-		}
 	}
 }
