@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95adce0a44da486db6693effe16ffd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabBall: {fileID: 9123433303119893196, guid: 1f9d7c8825e45457b9922baedf4ef923, type: 3}
+  PrefabBall: {fileID: 9123433303119893196, guid: ebeee99c20e6441ad850b4c7375ebe70, type: 3}
   Content: {fileID: 1265863623}
   _delayDefault: 0.1
   _randomValue: 1
@@ -1545,6 +1545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 194134442}
   TextInfo: {fileID: 814851327}
+  _sliderDefaultValue: 0
 --- !u!1 &1874753716
 GameObject:
   m_ObjectHideFlags: 0
