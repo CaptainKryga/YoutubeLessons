@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-namespace Lessons.Code023Events.Scripts
+namespace Core.Lessons.Code023Events.Scripts
 {
 	public class UserInterfaceManager : MonoBehaviour
 	{

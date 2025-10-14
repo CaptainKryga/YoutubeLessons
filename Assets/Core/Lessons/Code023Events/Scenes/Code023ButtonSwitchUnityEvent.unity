@@ -660,31 +660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnButtonPressed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1776427928}
-        m_TargetAssemblyTypeName: UnityEngine.Light, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1019724071}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &494288507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1138,11 +1114,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 415402, guid: 0bbc61fe891c93a4bbfe85069515bec2, type: 3}
   m_PrefabInstance: {fileID: 1350097419}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1019724071 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 151966, guid: 03456f4f7ff12804f8c4cf79101c25f4, type: 3}
-  m_PrefabInstance: {fileID: 2033928417}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1086593511 stripped
 Transform:
