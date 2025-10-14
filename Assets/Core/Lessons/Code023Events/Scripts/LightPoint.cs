@@ -1,4 +1,4 @@
-using Lessons.Code023Events.Scripts;
+using System;
 using UnityEngine;
 
 namespace Core.Lessons.Code023Events.Scripts

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Lessons.Code023Events.Scripts
+namespace Core.Lessons.Code023Events.Scripts
 {
     public class ButtonSwitch : MonoBehaviour
     {
