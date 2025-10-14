@@ -74,5 +74,5 @@ AssetOrigin:
   productId: 97949
   packageName: POLYGON Heist - Low Poly 3D Art by Synty
   packageVersion: 1.9.2
-  assetPath: Assets/PolygonHeist/Model/SM_Env_Wall_Interior_Ground_01.fbx
+  assetPath: Assets/Core/Models/Props/SM_Env_Wall_Interior_Ground_01.fbx
   uploadId: 737400

@@ -11,5 +11,5 @@ AssetOrigin:
   productId: 97949
   packageName: POLYGON Heist - Low Poly 3D Art by Synty
   packageVersion: 1.9.2
-  assetPath: Assets/PolygonHeist/Prefab/Props/SM_Prop_Couch_01.prefab
+  assetPath: Assets/Core/Prefabs/SM_Prop_Couch_01.prefab
   uploadId: 737400
