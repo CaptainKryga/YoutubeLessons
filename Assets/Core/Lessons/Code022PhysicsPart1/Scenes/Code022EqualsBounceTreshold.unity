@@ -1545,6 +1545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 194134442}
   TextInfo: {fileID: 814851327}
+  _sliderDefaultValue: 0
 --- !u!1 &1874753716
 GameObject:
   m_ObjectHideFlags: 0
