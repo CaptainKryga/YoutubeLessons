@@ -1,6 +1,7 @@
+using Lessons.Code023Events.Scripts;
 using UnityEngine;
 
-namespace Lessons.Code023Events.Scripts
+namespace Core.Lessons.Code023Events.Scripts
 {
 	[RequireComponent(typeof(Light))]
 	public class LightPoint : MonoBehaviour
