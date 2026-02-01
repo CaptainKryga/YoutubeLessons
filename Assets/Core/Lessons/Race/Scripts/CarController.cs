@@ -4,28 +4,52 @@ namespace Core.Lessons.Race.Scripts
 {
     public class CarController : MonoBehaviour
     {
-        [SerializeField] private Rigidbody _rb;
+        [SerializeField] private WheelCollider[] _frontWheels;
+        [SerializeField] private WheelCollider[] _rearWheels;
 
-        [SerializeField] private float _speed = 50;
-        [SerializeField] private float _turnSpeed = 20;
+        [SerializeField] private float _maxMotorForce = 1000;
+        [SerializeField] private float _maxSteeringAngle = 30f;
+        [SerializeField] private float _brakeForce = 1000f;
 
-        [SerializeField] private float _maxLinearMagnitude = 1;
+        private float _motorInput;
+        private float _steeringInput;
+        private float _brakeInput;
+        
+        private void Update()
+        {
+            _motorInput = Input.GetAxis("Vertical") * _maxMotorForce;
+            _steeringInput = Input.GetAxis("Horizontal") * _maxSteeringAngle;
+            _brakeInput = Input.GetKey(KeyCode.Space) ? _brakeForce : 0;
+        }
 
         private void FixedUpdate()
         {
-            float move = Input.GetAxis("Vertical");
-            float turn = Input.GetAxis("Horizontal");
+            for (int x = 0; x < _frontWheels.Length; x++)
+            {
+                _frontWheels[x].steerAngle = _steeringInput;
+                _frontWheels[x].brakeTorque = _brakeInput;
+                
+                UpdateWheelPose(_frontWheels[x]);
+            }
             
-            if (_rb.linearVelocity.magnitude < _maxLinearMagnitude)
+            for (int x = 0; x < _rearWheels.Length; x++)
             {
-                _rb.AddForce(_rb.transform.forward * move * _speed, ForceMode.Force);
+                _rearWheels[x].motorTorque = _motorInput;
+                _rearWheels[x].brakeTorque = _brakeInput;
+                
+                UpdateWheelPose(_rearWheels[x]);
             }
+        }
 
-            if (move != 0)
-            {
-                turn *= move > 0 ? 1 : -1;
-                _rb.transform.Rotate(Vector3.up, turn * _turnSpeed * Time.fixedDeltaTime);
-            }
+        private void UpdateWheelPose(WheelCollider wheel)
+        {
+            if (wheel.transform.childCount == 0) return;
+            
+            Transform child = wheel.transform.GetChild(0);
+            wheel.GetWorldPose(out Vector3 position, out Quaternion rotation);
+            
+            child.position = position;
+            child.rotation = rotation;
         }
     }
 }
