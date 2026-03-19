@@ -1,9 +1,12 @@
+using Core.Lessons.Race.Scripts.Surface;
 using UnityEngine;
 
 namespace Core.Lessons.Race.Scripts
 {
     public class CarController : MonoBehaviour
     {
+        [SerializeField] private SurfaceManager _surfaceManager;
+        
         [SerializeField] private WheelCollider[] _frontWheels;
         [SerializeField] private WheelCollider[] _rearWheels;
 
@@ -26,16 +29,16 @@ namespace Core.Lessons.Race.Scripts
         {
             for (int x = 0; x < _frontWheels.Length; x++)
             {
-                _frontWheels[x].steerAngle = _steeringInput;
-                _frontWheels[x].brakeTorque = _brakeInput;
+                _frontWheels[x].steerAngle = _steeringInput * _surfaceManager.SteeringGripMultiplier;
+                _frontWheels[x].brakeTorque = _brakeInput * _surfaceManager.BrakeGripMultiplier;
                 
                 UpdateWheelPose(_frontWheels[x]);
             }
             
             for (int x = 0; x < _rearWheels.Length; x++)
             {
-                _rearWheels[x].motorTorque = _motorInput;
-                _rearWheels[x].brakeTorque = _brakeInput;
+                _rearWheels[x].motorTorque = _motorInput * _surfaceManager.RearTractionMultiplier;
+                _rearWheels[x].brakeTorque = _brakeInput * _surfaceManager.BrakeGripMultiplier;
                 
                 UpdateWheelPose(_rearWheels[x]);
             }
